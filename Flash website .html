@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>⚡ FLASH USDT – Professional Flash Service</title>
+  <!-- QR Code library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <style>
+   * Recent Proofs Scrolling Gallery */
+.proofs-container {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 20px 0;
+  position: relative;
+  margin: 20px 0;
+  border-top: 1px solid #21262d;
+  border-bottom: 1px solid #21262d;
+}
+.proofs-track {
+  display: flex;
+  animation: scroll-right-to-left 60s linear infinite;
+  gap: 15px;
+  padding: 10px 0;
+}
+.proofs-track img {
+  width: 240px;
+  height: 180px;
+  border-radius: 10px;
+  border: 1px solid #30363d;
+  object-fit: cover;
+  transition: 0.3s;
+}
+.proofs-track img:hover {
+  border-color: #26a17b;
+  transform: scale(1.05);
+  z-index: 10;
+  position: relative;
+}
+@keyframes scroll-right-to-left {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background: #0a0c0f;
+      font-family: 'Courier New', monospace;
+      color: #c9d1d9;
+      overflow-x: hidden;
+      position: relative;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: repeating-linear-gradient(0deg, rgba(0,255,0,0.03) 0px, rgba(0,255,0,0.03) 1px, transparent 1px, transparent 2px);
+      pointer-events: none;
+      z-index: 0;
+    }
+    .matrix-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      opacity: 0.1;
+      pointer-events: none;
+      overflow: hidden;
+    }
+    .matrix-bg span {
+      position: absolute;
+      color: #0f0;
+      font-size: 14px;
+      animation: fall linear infinite;
+    }
+    @keyframes fall {
+      0% { transform: translateY(-100%); opacity: 0; }
+      10% { opacity: 1; }
+      90% { opacity: 1; }
+      100% { transform: translateY(110vh); opacity: 0; }
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      position: relative;
+      z-index: 1;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+      border-bottom: 1px solid #27ae60;
+      margin-bottom: 40px;
+    }
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    .logo-area svg {
+      width: 50px;
+      height: 50px;
+      fill: #26a17b;
+      filter: drop-shadow(0 0 8px #26a17b);
+    }
+    .logo-text {
+      font-size: 2rem;
+      font-weight: 900;
+      letter-spacing: 3px;
+      color: #fff;
+      text-shadow: 0 0 15px #26a17b;
+    }
+    .logo-text span {
+      color: #26a17b;
+    }
+    nav a {
+      color: #8b949e;
+      text-decoration: none;
+      margin-left: 25px;
+      font-weight: bold;
+      font-size: 1rem;
+      transition: 0.3s;
+      position: relative;
+    }
+    nav a:hover {
+      color: #fff;
+      text-shadow: 0 0 10px #0f0;
+    }
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0%;
+      height: 2px;
+      background: #27ae60;
+      transition: 0.3s;
+    }
+    nav a:hover::after {
+      width: 100%;
+    }
+    h1, h2, h3 {
+      color: #ffffff;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+    .section-title {
+      text-align: center;
+      margin: 60px 0 30px;
+      font-size: 2.5rem;
+      color: #26a17b;
+      text-shadow: 0 0 20px #26a17b;
+      position: relative;
+    }
+    .section-title::after {
+      content: "";
+      display: block;
+      width: 80px;
+      height: 3px;
+      background: #26a17b;
+      margin: 10px auto;
+      box-shadow: 0 0 15px #26a17b;
+    }
+    .pricing-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+      margin-bottom: 50px;
+    }
+    .card {
+      background: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 12px;
+      padding: 30px 25px;
+      width: 250px;
+      text-align: center;
+      transition: 0.3s;
+      position: relative;
+      backdrop-filter: blur(5px);
+    }
+    .card:hover {
+      border-color: #26a17b;
+      box-shadow: 0 0 20px rgba(38, 161, 123, 0.4);
+      transform: translateY(-5px);
+    }
+    .card.popular {
+      border: 2px solid #f0b90b;
+      box-shadow: 0 0 25px rgba(240, 185, 11, 0.4);
+      background: #1e2329;
+    }
+    .popular-badge {
+      position: absolute;
+      top: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #f0b90b;
+      color: #000;
+      font-weight: bold;
+      padding: 5px 20px;
+      border-radius: 15px;
+      font-size: 0.8rem;
+      letter-spacing: 1px;
+      box-shadow: 0 0 15px #f0b90b;
+    }
+    .card h3 {
+      font-size: 1.8rem;
+      color: #26a17b;
+      margin-top: 10px;
+    }
+    .card .price {
+      font-size: 2.2rem;
+      font-weight: bold;
+      color: #fff;
+      margin: 15px 0;
+    }
+    .card .price small {
+      font-size: 1rem;
+      color: #8b949e;
+    }
+    .card ul {
+      list-style: none;
+      text-align: left;
+      padding: 0 10px;
+      margin: 20px 0;
+    }
+    .card ul li {
+      padding: 8px 0;
+      border-bottom: 1px solid #21262d;
+      font-size: 0.85rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .card ul li::before {
+      content: "✔️";
+      color: #27ae60;
+      font-size: 0.9rem;
+    }
+    .btn {
+      background: transparent;
+      border: 2px solid #26a17b;
+      color: #26a17b;
+      padding: 12px 30px;
+      border-radius: 30px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-top: 15px;
+      display: inline-block;
+      text-decoration: none;
+    }
+    .btn:hover {
+      background: #26a17b;
+      color: #000;
+      box-shadow: 0 0 25px #26a17b;
+    }
+    .btn.gold {
+      border-color: #f0b90b;
+      color: #f0b90b;
+    }
+    .btn.gold:hover {
+      background: #f0b90b;
+      color: #000;
+      box-shadow: 0 0 25px #f0b90b;
+    }
+    /* Payment Modal */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(0,0,0,0.85);
+      z-index: 1000;
+      justify-content: center;
+      align-items: center;
+      backdrop-filter: blur(5px);
+    }
+    .modal-overlay.active {
+      display: flex;
+    }
+    .modal {
+      background: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 16px;
+      padding: 30px;
+      width: 90%;
+      max-width: 700px;
+      max-height: 90vh;
+      overflow-y: auto;
+      position: relative;
+    }
+    .modal h2 {
+      color: #26a17b;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .modal-close {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      font-size: 2rem;
+      color: #8b949e;
+      cursor: pointer;
+    }
+    .payment-methods {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin: 20px 0;
+    }
+    .method {
+      background: #1e2329;
+      border: 2px solid #30363d;
+      border-radius: 12px;
+      padding: 15px;
+      width: 150px;
+      text-align: center;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .method.selected {
+      border-color: #26a17b;
+      box-shadow: 0 0 15px #26a17b;
+    }
+    .method img {
+      width: 40px;
+      height: 40px;
+      margin-bottom: 8px;
+    }
+    .method span {
+      display: block;
+      font-weight: bold;
+      font-size: 0.9rem;
+    }
+    .address-box {
+      background: #0d1117;
+      padding: 15px;
+      border-radius: 8px;
+      margin: 15px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border: 1px solid #30363d;
+    }
+    .address-box .addr {
+      word-break: break-all;
+      font-size: 0.8rem;
+      color: #58a6ff;
+    }
+    .address-box .copy-btn {
+      background: transparent;
+      border: 1px solid #26a17b;
+      color: #26a17b;
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 0.7rem;
+    }
+    .address-box .copy-btn:hover {
+      background: #26a17b;
+      color: #000;
+    }
+    .qr-code-container {
+      display: flex;
+      justify-content: center;
+      margin: 20px 0;
+    }
+    .payment-footer {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .payment-footer .btn {
+      background: #26a17b;
+      color: #000;
+      border: none;
+    }
+    .payment-footer .btn:hover {
+      box-shadow: 0 0 25px #26a17b;
+    }
+    /* I Have Paid Form */
+    .paid-form {
+      display: none;
+      margin-top: 20px;
+      background: #1e2329;
+      padding: 20px;
+      border-radius: 12px;
+    }
+    .paid-form input, .paid-form textarea {
+      width: 100%;
+      background: #0d1117;
+      border: 1px solid #30363d;
+      color: #c9d1d9;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 8px;
+      font-family: inherit;
+    }
+    .paid-form input[type="file"] {
+      padding: 8px;
+    }
+    .paid-form .btn {
+      width: 100%;
+      background: #8b5cf6;
+      border-color: #8b5cf6;
+      color: #fff;
+    }
+    .contact-info {
+      text-align: center;
+      margin: 30px 0;
+    }
+    .contact-info a {
+      color: #58a6ff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      text-align: center;
+      margin: 60px 0 20px;
+      color: #484f58;
+      font-size: 0.8rem;
+    }
+  </style>
+</head>
+<body>
+<div class="matrix-bg" id="matrixBg"></div>
+
+<!-- Payment Modal -->
+<div class="modal-overlay" id="paymentModal">
+  <div class="modal">
+    <span class="modal-close" onclick="closeModal()">&times;</span>
+    <h2>Select Payment Method</h2>
+    <div class="payment-methods" id="paymentMethods">
+      <!-- Dynamically populated -->
+    </div>
+    <div id="paymentDetails" style="display:none;">
+      <div class="address-box">
+        <span class="addr" id="addressDisplay"></span>
+        <button class="copy-btn" onclick="copyAddress()">Copy</button>
+      </div>
+      <div class="qr-code-container" id="qrCodeContainer"></div>
+      <div class="payment-footer">
+        <button class="btn" onclick="showPaidForm()">I Have Paid</button>
+      </div>
+      <div class="paid-form" id="paidForm">
+        <h3 style="color:#8b5cf6;">Confirm Payment</h3>
+        <input type="email" id="payerEmail" placeholder="Your Email" required>
+        <input type="text" id="txId" placeholder="Transaction ID (TXID)" required>
+        <input type="file" id="receiptUpload" accept="image/*" required>
+        <button class="btn" onclick="submitPayment()">Submit & Verify</button>
+      </div>
+    </div>
+    <div id="planInfo" style="color:#8b949e; text-align:center; margin-bottom:10px;"></div>
+  </div>
+</div>
+
+<div class="container">
+  <header>
+    <div class="logo-area">
+      <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+        <g fill="none" fill-rule="evenodd">
+          <circle cx="16" cy="16" r="16" fill="#26A17B"/>
+          <path fill="#FFF" d="M17.922 17.383v-.002c-.11.008-.677.042-1.942.042-1.008 0-1.722-.03-1.972-.042v.003c-3.888-.171-6.79-.848-6.79-1.658 0-.809 2.902-1.486 6.79-1.66v2.644c.254.018.982.061 1.988.061 1.207 0 1.812-.05 1.926-.06v-2.643c3.88.173 6.775.85 6.775 1.658 0 .81-2.896 1.485-6.775 1.657m0-3.59v-2.366h5.414V7.819H8.574v3.608h5.414v2.365c-4.4.202-7.71 1.074-7.71 2.118 0 1.044 3.31 1.915 7.71 2.118v7.582h3.914v-7.584c4.393-.202 7.695-1.073 7.695-2.116 0-1.043-3.301-1.914-7.695-2.117z"/>
+        </g>
+      </svg>
+      <div class="logo-text">FLASH <span>USDT</span></div>
+    </div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#flash">Flash USDT</a>
+      <a href="#software">Software</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Home Section -->
+  <section id="home" style="text-align: center; padding: 60px 0;">
+    <h1 style="font-size: 3rem; margin-bottom: 20px;">Professional Flash USDT Service</h1>
+    <p style="font-size: 1.3rem; max-width: 700px; margin: 0 auto; color: #8b949e;">
+      Instant, tradable, and fully transferable USDT flash across multiple networks. 
+      All transactions pass wallet validations and remain spendable for 90–100 days. 
+      No traces, fully anonymous.
+    </p>
+  </section>
+
+  <!-- Flash USDT Pricing -->
+  <section id="flash">
+    <h2 class="section-title">Flash USDT Plans</h2>
+    <div class="pricing-cards">
+      <div class="card">
+        <h3>Basic</h3>
+        <div class="price">$30 <small>/ 1k Flash</small></div>
+        <ul>
+          <li>Transferable</li>
+          <li>Tradable</li>
+          <li>Gambling compatible</li>
+          <li>Accepted in all major wallets</li>
+          <li>Validation 90-100 days</li>
+        </ul>
+        <button class="btn" onclick="openModal('Basic', 30, '1k')">Place Order</button>
+      </div>
+      <div class="card">
+        <h3>Standard</h3>
+        <div class="price">$100 <small>/ 5k Flash</small></div>
+        <ul>
+          <li>Same quality features</li>
+          <li>Higher volume</li>
+          <li>Instant delivery</li>
+          <li>Works on all networks</li>
+          <li>Validation 90-100 days</li>
+        </ul>
+        <button class="btn" onclick="openModal('Standard', 100, '5k')">Place Order</button>
+      </div>
+      <div class="card popular">
+        <div class="popular-badge">MOST POPULAR</div>
+        <h3>Premium</h3>
+        <div class="price">$170 <small>/ 10k Flash</small></div>
+        <ul>
+          <li>Best value</li>
+          <li>Transferable & Tradable</li>
+          <li>Gambling enabled</li>
+          <li>Trust Wallet, MetaMask, Binance, KuCoin, Bybit, Bitget</li>
+          <li>Validation 90-100 days</li>
+        </ul>
+        <button class="btn gold" onclick="openModal('Premium', 170, '10k')">Place Order</button>
+      </div>
+      <div class="card">
+        <h3>Whale</h3>
+        <div class="price">$500 <small>/ 100k Flash</small></div>
+        <ul>
+          <li>Massive volume</li>
+          <li>Same top quality</li>
+          <li>Bulk discount available</li>
+          <li>Works anywhere</li>
+          <li>Validation 90-100 days</li>
+        </ul>
+        <button class="btn" onclick="openModal('Whale', 500, '100k')">Place Order</button>
+      </div>
+    </div>
+  </section>/
+
+  <!-- Flashing Software Section -->
+  <section id="software">
+    <h2 class="section-title">Flashing Software</h2>
+    <div class="pricing-cards">
+      <div class="card">
+        <h3>Demo License</h3>
+        <div class="price">$15</div>
+        <p style="color:#8b949e;">200 Flash – One time use only</p>
+        <button class="btn" onclick="openModal('Demo License', 15, '200 Flash')">Place Order</button>
+      </div>
+      <div class="card">
+        <h3>Monthly</h3>
+        <div class="price">$500 <small>/ month</small></div>
+        <p style="color:#8b949e;">Daily limit: 50k Flash</p>
+        <button class="btn" onclick="openModal('Monthly', 500, '50k/day')">Place Order</button>
+      </div>
+      <div class="card">
+        <h3>Lifetime</h3>
+        <div class="price">$2500</div>
+        <p style="color:#8b949e;">Daily limit: 100k Flash</p>
+        <button class="btn" onclick="openModal('Lifetime', 2500, '100k/day')">Place Order</button>
+      </div>
+    </div>
+  </section>
+<!-- Recent Proofs Section -->
+<section id="proofs">
+  <h2 class="section-title">Recent Proofs</h2>
+  <div style="text-align:center; margin-bottom:20px;">
+    <video controls width="100%" style="max-width:600px; border-radius:12px; border:1px solid #30363d; margin:10px 0;">
+      <source src="#" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <video controls width="100%" style="max-width:600px; border-radius:12px; border:1px solid #30363d; margin:10px 0;">
+      <source src="#" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  <div class="proofs-container">
+    <div class="proofs-track">
+      <!-- 12 Proof Images -->
+      <img src="https://via.placeholder.com/240x180/0a0c0f/26a17b?text=Proof+1" alt="Proof 1">
+      <img src="https://via.placeholder.com/240x180/0a0c0f/26a17b?text=Proof+2" alt="Proof 2">
+      <img src="https://via.placeholder.com/240x180/0a0c0f/26a17b?text=Proof+3" alt="Proof 3">
+      <img src="https://via.placeholder.com/240x180/0a0c0f/26a17b?text=Proof+4" alt="Proof 4">
+      <img src="https://via.placeholder.com/240x180/0a0c0f/26a17b?text=Proof+5" alt="Proof 5">
+      <img src="https://via.placeholder.com/240x180/0a0c0f/26a17b?text=Proof+6" alt="Proof 6">
+      <img src="https://via.placeholder.com/240x180/0a0c0f/26a17b?text=Proof+7" alt="Proof 7">
+      <img src="https://via.placeholder.com/240x180/0a0c0f/26a17b?text=Proof+8" alt="Proof 8">
+      <img src="https://via.placeholder.com/240x180/0a0c0f/26a17b?text=Proof+9" alt="Proof 9">
+      <img src="https://via.placeholder.com/240x180/0a0c0f/26a17b?text=Proof+10" alt="Proof 10">
+      <img src="https://via.placeholder.com/240x180/0a0c0f/26a17b?text=Proof+11" alt="Proof 11">
+      <img src="https://via.placeholder.com/240x180/0a0c0f/26a17b?text=Proof+12" alt="Proof 12">
+      <!-- Duplicates for seamless scroll -->
+      <img src="https://via.placeholder.com/240x180/0a0c0f/26a17b?text=Proof+1" alt="Proof 1">
+      <img src="https://via.placeholder.com/240x180/0a0c0f/26a17b?text=Proof+2" alt="Proof 2">
+      <img src="https://via.placeholder.com/240x180/0a0c0f/26a17b?text=Proof+3" alt="Proof 3">
+      <img src="https://via.placeholder.com/240x180/0a0c0f/26a17b?text=Proof+4" alt="Proof 4">
+    </div>
+  </div>
+  <p style="text-align:center; color:#484f58; margin-top:20px;">Real transaction proofs — updated daily</p>
+</section>
+
+
+  <!-- Contact Section -->
+ 
+  <section id="contact">
+    <h2 class="section-title">Support</h2>
+    <div class="contact-info">
+      <p>📧 Email: <a href="mailto:thetlstrader@gmail.com">thetlstrader@gmail.com</a></p>
+      <p>💬 Telegram: <a href="https://t.me/TLSTRADER" target="_blank">@TLSTRADER</a></p>
+      <p>📱 WhatsApp: <a href="https://wa.me/923329543344" target="_blank">+92 332 9543344</a></p>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 Flash USDT – Operational Security.
+  </footer>
+</div>
+
+<script>
+  // Matrix effect
+  const matrixBg = document.getElementById('matrixBg');
+  const chars = '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
+  for (let i = 0; i < 50; i++) {
+    const span = document.createElement('span');
+    span.textContent = chars[Math.floor(Math.random() * chars.length)];
+    span.style.left = Math.random() * 100 + '%';
+    span.style.animationDuration = Math.random() * 3 + 2 + 's';
+    span.style.animationDelay = Math.random() * 5 + 's';
+    span.style.fontSize = Math.random() * 20 + 10 + 'px';
+    matrixBg.appendChild(span);
+  }
+
+  // Payment data
+  const paymentMethods = [
+    { name: 'USDT TRC20', img: 'https://cryptologos.cc/logos/tether-usdt-logo.png?v=023', addr: 'TQRdpb7tPMD3JB1NDFnQJn3H1KSaHKyJ3L' },
+    { name: 'USDT BEP20', img: 'https://cryptologos.cc/logos/binance-coin-bnb-logo.png?v=023', addr: '0x16e1eee1527975868e981c393b4f2233b1e782e4' },
+    { name: 'USDT ERC20', img: 'https://cryptologos.cc/logos/tether-usdt-logo.png?v=023', addr: '0x16e1eee1527975868e981c393b4f2233b1e782e4' },
+    { name: 'BTC', img: 'https://cryptologos.cc/logos/bitcoin-btc-logo.png?v=023', addr: '37PY3x679pQzPsJBKnBGVZvKKoFstA' },
+    { name: 'ETH', img: 'https://cryptologos.cc/logos/ethereum-eth-logo.png?v=023', addr: '0x16e1eee1527975868e981c393b4f2233b1e782e4' }
+  ];
+
+  let currentPlan = {};
+  let selectedMethod = null;
+
+  function openModal(planName, price, amount) {
+    currentPlan = { planName, price, amount };
+    document.getElementById('planInfo').innerText = `Plan: ${planName} | $${price} | ${amount}`;
+    document.getElementById('paymentModal').classList.add('active');
+    document.getElementById('paymentDetails').style.display = 'none';
+    document.getElementById('paidForm').style.display = 'none';
+    renderPaymentMethods();
+  }
+
+  function closeModal() {
+    document.getElementById('paymentModal').classList.remove('active');
+    selectedMethod = null;
+    document.getElementById('qrCodeContainer').innerHTML = '';
+  }
+
+  function renderPaymentMethods() {
+    const container = document.getElementById('paymentMethods');
+    container.innerHTML = '';
+    paymentMethods.forEach((method, index) => {
+      const div = document.createElement('div');
+      div.className = 'method';
+      div.dataset.index = index;
+      div.innerHTML = `<img src="${method.img}" alt="${method.name}" onerror="this.src='https://via.placeholder.com/40x40/0a0c0f/ffffff?text=${method.name[0]}'"><span>${method.name}</span>`;
+      div.onclick = () => selectMethod(index);
+      container.appendChild(div);
+    });
+  }
+
+  function selectMethod(index) {
+    selectedMethod = index;
+    document.querySelectorAll('.method').forEach((el, i) => {
+      el.classList.toggle('selected', i === index);
+    });
+    const method = paymentMethods[index];
+    document.getElementById('addressDisplay').innerText = method.addr;
+    document.getElementById('paymentDetails').style.display = 'block';
+    document.getElementById('paidForm').style.display = 'none';
+    // Generate QR code
+    const qrContainer = document.getElementById('qrCodeContainer');
+    qrContainer.innerHTML = '';
+    new QRCode(qrContainer, {
+      text: method.addr,
+      width: 180,
+      height: 180,
+      colorDark: "#26a17b",
+      colorLight: "#0a0c0f",
+      correctLevel: QRCode.CorrectLevel.H
+    });
+  }
+
+  function copyAddress() {
+    const addr = document.getElementById('addressDisplay').innerText;
+    navigator.clipboard.writeText(addr).then(() => {
+      alert('Address copied!');
+    }).catch(() => {
+      prompt('Manual copy:', addr);
+    });
+  }
+
+  function showPaidForm() {
+    if (!selectedMethod) {
+      alert('Select a payment method first.');
+      return;
+    }
+    document.getElementById('paidForm').style.display = 'block';
+  }
+
+  function submitPayment() {
+    const email = document.getElementById('payerEmail').value.trim();
+    const txid = document.getElementById('txId').value.trim();
+    const fileInput = document.getElementById('receiptUpload');
+    if (!email || !txid || !fileInput.files.length) {
+      alert('Please fill all fields and upload a receipt screenshot.');
+      return;
+    }
+    const file = fileInput.files[0];
+    const reader = new FileReader();
+    reader.onload = function(e) {
+      const receiptDataUrl = e.target.result;
+      const method = paymentMethods[selectedMethod];
+      const body = `Order Details:\nPlan: ${currentPlan.planName}\nPrice: $${currentPlan.price}\nAmount: ${currentPlan.amount}\nPayment Method: ${method.name}\nWallet Address: ${method.addr}\nUser Email: ${email}\nTXID: ${txid}\nReceipt: [Attached as image - please save manually]\n\nReceipt Data URL: ${receiptDataUrl}`;
+      // Open default email client with data
+      const mailto = `mailto:thetlstrader@gmail.com?subject=Payment%20Confirmation%20-%20${encodeURIComponent(currentPlan.planName)}&body=${encodeURIComponent(body)}`;
+      window.location.href = mailto;
+      alert('Your email client will open. Please send the email. If the receipt image is not attached, please attach it manually.');
+      closeModal();
+    };
+    reader.readAsDataURL(file);
+  }
+
+  // Smooth scroll
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', function(e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+</script>
+</body>
+</html>
